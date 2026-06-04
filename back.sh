@@ -8,7 +8,7 @@ case $choice in
   1)
     sed -i 's/transport = "wsmux"/transport = "wssmux"/' /root/backhaul-core/iran443.toml
     sed -i '/^mtu = /a tls_cert = "/root/cert/ip/fullchain.pem"\ntls_key = "/root/cert/ip/privkey.pem"' /root/backhaul-core/iran443.toml
-    systemctl restart backhaul-iran432.service
+    systemctl restart backhaul-iran443.service
     echo "Iran updated and restarted."
     ;;
   2)
